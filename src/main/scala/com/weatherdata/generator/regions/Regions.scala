@@ -11,7 +11,7 @@ object Regions extends Enumeration {
   def getRegion(distance: Double): Regions.Value = distance match {
     case x if x <= EarthDistance.equatorPoleDistance * 15 / 100 => Equator
     case x if x <= EarthDistance.equatorPoleDistance * 35 / 100 => Tropic
-    case x if x <= EarthDistance.equatorPoleDistance * 35 / 100 => ABOVE_TROPIC
+    case x if x <= EarthDistance.equatorPoleDistance * 70 / 100 => ABOVE_TROPIC
     case _ => Poles
   }
 }
